@@ -141,7 +141,7 @@ gs = GridSpec((displayed_genres+1)//2*3 + 4, 6)
 
 def current_plot():
     yield fig.add_subplot(gs[:4,1:5])
-    for i in range(28):
+    for i in range(displayed_genres):
         yield fig.add_subplot(gs[4+i//2*3:7+i//2*3, (i%2)*3:(i%2+1)*3])
 plots = current_plot()
 
